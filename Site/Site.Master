@@ -2,12 +2,13 @@
 
 <!DOCTYPE html>
 
-<html lang="pt">
+<html lang="pt-BR">
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="João Almeida" />
-    <title><%: Page.Title %></title>
+    <meta name="description" content="Projeto feito para práticar programação" />
+    <title>Portifólio</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -38,34 +39,41 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="/">Projeto</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" runat="server" href="~/">Projetos</a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a runat="server" class="nav-link" href="~/">Tela Inicial</a></li>
+                <li class="nav-item"><a runat="server" class="nav-link" href="~/About">About</a></li>
+                <li class="nav-item"><a runat="server" class="nav-link" href="~/Contact">Contact</a></li>
+                <li class="nav-item"><a runat="server" class="nav-link" href="~/Pagina/ValidaDoc.aspx">Valida Documento</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Curso JavaScript
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a runat="server" class="dropdown-item" href="~/Cursos/Starter/JavaScript/Modulo1.aspx">Módulo 01</a>
+                    </div>
+                </li>
+            </ul>
+          </div>
         </nav>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
-        </div>
-
+        <main>
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+        <footer>
+            <div class="container text-center">
+                <p>MIT &copy; <%: DateTime.Now.Year %> - João Almeida</p>
+            </div>
+        </footer>
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server"></asp:ContentPlaceHolder>
     </form>
 </body>
 </html>
