@@ -7,7 +7,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="João Almeida" />
-    <meta name="description" content="Projeto feito para práticar programação" />
+    <meta
+        name="description"
+        content="Projeto feito para por prática programação conhecimentos que venho adquirindo."
+    />
     <title>Portifólio</title>
 
     <asp:PlaceHolder runat="server">
@@ -17,6 +20,8 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <%--FONT AWESOME--%>
+    <script src="https://kit.fontawesome.com/c0a130f7f7.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <form runat="server">
@@ -47,15 +52,14 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a runat="server" class="nav-link" href="~/">Tela Inicial</a></li>
-                <li class="nav-item"><a runat="server" class="nav-link" href="~/About">About</a></li>
-                <li class="nav-item"><a runat="server" class="nav-link" href="~/Contact">Contact</a></li>
+                <li class="nav-item"><a runat="server" class="nav-link" href="~/">Página Inicial</a></li>
                 <li class="nav-item"><a runat="server" class="nav-link" href="~/Pagina/ValidaDoc.aspx">Valida Documento</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Curso JavaScript
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a runat="server" class="dropdown-item" href="~/Cursos/Starter/JavaScript/Introducao.aspx">Indtrodução</a>
                         <a runat="server" class="dropdown-item" href="~/Cursos/Starter/JavaScript/Modulo1.aspx">Módulo 01</a>
                     </div>
                 </li>

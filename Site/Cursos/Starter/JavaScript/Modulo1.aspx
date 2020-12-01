@@ -14,7 +14,7 @@
                     <h5 class="card-title">Enunciado</h5>
                 </div>
                 <div class="card-body">
-                    <p>Crie uma função que dado o objeto a seguir:</p>
+                    <p class="card-text">Crie uma função que dado o objeto a seguir:</p>
                     <pre class="codigo"><code>var endereco =
 {
     rua: "Rua dos pinheiros",
@@ -47,27 +47,28 @@
                     </div>
                     <div class="form-group">
                         <label for="txtCity">Cidade</label>
-                        <asp:TextBox runat="server" ID="txtCity" ClientIDMode="Static" CssClass="form-control" />
-                        <asp:RequiredFieldValidator runat="server" CssClass="error" ErrorMessage="Obrigatório"
+                        <asp:RequiredFieldValidator runat="server" CssClass="error" ErrorMessage="*Obrigatório"
                             ControlToValidate="txtCity" ValidationGroup="address" />
+                        <asp:TextBox runat="server" ID="txtCity" ClientIDMode="Static" CssClass="form-control" />
+                        
                     </div>
                     <div class="form-group">
                         <label for="txtDistrict">Bairro</label>
-                        <asp:TextBox runat="server" ID="txtDistrict" ClientIDMode="Static" CssClass="form-control" />
-                        <asp:RequiredFieldValidator runat="server" CssClass="error" ErrorMessage="Obrigatório"
+                        <asp:RequiredFieldValidator runat="server" CssClass="error" ErrorMessage="*Obrigatório"
                             ControlToValidate="txtDistrict" ValidationGroup="address" />
+                        <asp:TextBox runat="server" ID="txtDistrict" ClientIDMode="Static" CssClass="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="txtStreet">Rua/Avenida</label>
-                        <asp:TextBox runat="server" ID="txtStreet" ClientIDMode="Static" CssClass="form-control" />
-                        <asp:RequiredFieldValidator runat="server" CssClass="error" ErrorMessage="Obrigatório"
+                        <asp:RequiredFieldValidator runat="server" CssClass="error" ErrorMessage="*Obrigatório"
                             ControlToValidate="txtStreet" ValidationGroup="address" />
+                        <asp:TextBox runat="server" ID="txtStreet" ClientIDMode="Static" CssClass="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="txtNumber">Número</label>
-                        <asp:TextBox runat="server" ID="txtNumber" ClientIDMode="Static" CssClass="form-control" />
-                        <asp:RequiredFieldValidator runat="server" CssClass="error" ErrorMessage="Obrigatório"
+                        <asp:RequiredFieldValidator runat="server" CssClass="error" ErrorMessage="*Obrigatório"
                             ControlToValidate="txtNumber" ValidationGroup="address" />
+                        <asp:TextBox runat="server" ID="txtNumber" ClientIDMode="Static" CssClass="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="txtComplement">Complemento</label>
@@ -106,11 +107,15 @@ pares(32, 321);</code></pre>
                 <div  class="card-body">
                     <div class="form-group">
                         <label for="txtBeginValue">Valor inicial</label>
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtBeginValue"
+                            CssClass="error" ErrorMessage="*Obrigatório" ValidationGroup="pair" />
                         <asp:TextBox runat="server" ID="txtBeginValue" ClientIDMode="Static"
                             CssClass="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="txtEndValue">Valor final</label>
+                        <asp:RequiredFieldValidator runat="server" ValidationGroup="pair"
+                            CssClass="error" ErrorMessage="*Origatório" ControlToValidate="txtEndValue" />
                         <asp:TextBox runat="server" ID="txtEndValue" ClientIDMode="Static"
                             CssClass="form-control" />
                     </div>
@@ -149,11 +154,15 @@ experiência(anosEstudo);</code></pre>
                 <div class="card-body">
                     <div class="form-group">
                         <label for="txtName">Nome</label>
+                        <asp:RequiredFieldValidator runat="server" ValidationGroup="experience"
+                            CssClass="error" ErrorMessage="*Obrigatório" ControlToValidate="txtName" />
                         <asp:TextBox runat="server" ID="txtName" ClientIDMode="Static"
                             CssClass="form-control" />
                     </div>
                     <div class="form-group">
                         <label for="txtYear">Anos</label>
+                        <asp:RequiredFieldValidator runat="server" ValidationGroup="experience"
+                            CssClass="error" ErrorMessage="*Obrigatório" ControlToValidate="txtYear" />
                         <asp:TextBox runat="server" ID="txtYear" ClientIDMode="Static"
                             CssClass="form-control" />
                     </div>
@@ -172,11 +181,15 @@ experiência(anosEstudo);</code></pre>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ScriptContent" runat="server">
     <script>
-        document.getElementById('btnAddress').addEventListener('click', () => event.preventDefault());
-        document.getElementById('btnPair').addEventListener('click', () => event.preventDefault());
-        document.getElementById('btnExperience').addEventListener('click', () => event.preventDefault());
-
         function setAddress() {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (!Page_ClientValidate('address')) {
+                $('#ddlState').focus();
+                return false;
+            }
+
             const state = $('#ddlState').val();
             const city = $('#txtCity').val();
             const district = $('#txtDistrict').val();
@@ -191,10 +204,18 @@ experiência(anosEstudo);</code></pre>
                 address += `, ${complement}.`;
 
             $('#txtAddress').text(address);
-            return;
+            return false;
         }
 
         function pares() {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (!Page_ClientValidate('pair')) {
+                $('#txtBeginValue').focus();
+                return false;
+            }
+
             var first = $('#txtBeginValue').val();
             var end = $('#txtEndValue').val();
 
@@ -220,10 +241,18 @@ experiência(anosEstudo);</code></pre>
             else
                 $('#lblPair').text('Nenhum número par!');
 
-            return;
+            return false;
         }
 
         function experience() {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (!Page_ClientValidate('experience')) {
+                $('#txtName').focus();
+                return false;
+            }
+
             const name = $('#txtName').val();
             var year = $('#txtYear').val();
             var awnser = name + ' é ';
@@ -242,7 +271,7 @@ experiência(anosEstudo);</code></pre>
             }
 
             $('#userExperience').text(awnser);
-            return;
+            return false;
         }
     </script>
 </asp:Content>
