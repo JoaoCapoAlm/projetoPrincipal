@@ -72,7 +72,7 @@
                 </asp:ContentPlaceHolder>
             </div>
         </main>
-        <footer>
+        <footer class="footer">
             <div class="container text-center">
                 <p>MIT &copy; <%: DateTime.Now.Year %> - João Almeida</p>
             </div>

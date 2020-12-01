@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Site._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
     <div class="jumbotron">
         <h1>E esse projeto? Serve para que?</h1>
         <p class="lead">
@@ -12,8 +11,8 @@
             Outros projetos feitos por mim estão disponíveis atualmente no GitHub. Caso precise, envie uma mensagem pelo LinkedIn.
         </p>
         <p>
-            <a href="https://github.com/JoaoCapoAlm/" class="btn btn-info btn-lg"><i class="fab fa-github"></i> GitHub &raquo;</a>
-            <a href="https://www.linkedin.com/in/joao-capoani/" class="btn btn-info btn-lg"><i class="fab fa-linkedin"></i> LinkedIn &raquo;</a>
+            <a href="https://github.com/JoaoCapoAlm/" target="_blank" class="btn btn-info btn-lg"><i class="fab fa-github"></i> GitHub &raquo;</a>
+            <a href="https://www.linkedin.com/in/joao-capoani/" target="_blank" class="btn btn-info btn-lg"><i class="fab fa-linkedin"></i> LinkedIn &raquo;</a>
         </p>
     </div>
 

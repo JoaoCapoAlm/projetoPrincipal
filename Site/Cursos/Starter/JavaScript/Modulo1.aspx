@@ -5,8 +5,10 @@
         <h3 class="display-5">Introdução JavaScript</h3>
     </div>
     <div class="row">
-        <div class="col-12 text-center">
-            <h2>Exercício 1</h2>
+        <div class="container">
+            <div class="exercice">
+                <h3>Exercício 1</h3>
+            </div>
         </div>
         <div class="col-md-6">
             <div class="card">
@@ -83,8 +85,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 text-center">
-            <h2>Exercício 2</h2>
+        <div class="container">
+            <div class="exercice">
+                <h3>Exercício 2</h3>
+            </div>
         </div>
         <div class="col-md-6">
             <div class="card">
@@ -128,8 +132,10 @@ pares(32, 321);</code></pre>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 text-center">
-            <h2>Exercício 4</h2>
+        <div class="container">
+            <div class="exercice">
+                <h3>Exercício 4</h3>
+            </div>
         </div>
         <div class="col-md-6">
             <div class="card">
