@@ -16,7 +16,7 @@
         </p>
     </div>
 
-    <div class="row">
+    <section class="row">
         <div class="col-md-4 mb20">
             <div class="card">
                 <div class="card-header">
@@ -42,7 +42,7 @@
         <div class="col-md-4">
             
         </div>
-    </div>
+    </section>
     <div class="row">
         <div class="col-12">
             <div class="card">

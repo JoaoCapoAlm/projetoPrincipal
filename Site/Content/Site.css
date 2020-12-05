@@ -30,7 +30,7 @@ nav {
 }
 
 .exercice {
-    width: 50%;
+    width: 60%;
     padding: 10px;
     margin: 30px auto 20px;
     background-color: var(--color-rocket);
@@ -39,4 +39,8 @@ nav {
     border-radius: 80px;
     text-align: center;
     text-transform: uppercase;
+}
+
+.marginAuto {
+    margin: auto;
 }

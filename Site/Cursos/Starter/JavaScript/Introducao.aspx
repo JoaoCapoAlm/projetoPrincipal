@@ -29,11 +29,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 marginAuto">
             <div class="card mb20">
                 <div class="card-header">
                     <h3 class="card-title">Módulo 2</h3>
-                    <h3 class="card-subtitle">Manipulando a DOM</h3>
+                    <h4 class="card-subtitle">Manipulando a DOM</h4>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Eventos inline</li>
@@ -52,7 +52,7 @@
             <div class="card mb20">
                 <div class="card-header">
                     <h3 class="card-title">Módulo 3</h3>
-                    <h3 class="card-subtitle">App de Todos</h3>
+                    <h4 class="card-subtitle">App de Todos</h4>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Estrutura do app</li>
@@ -63,15 +63,15 @@
                     <li class="list-group-item">Salvando no storage</li>
                 </ul>
                 <div class="card-footer text-center">
-                    <a href="Modulo3.aspx" class="btn btn-primary">Desafios</a>
+                    <span>Não possui desafios</span>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 marginAuto">
             <div class="card mb20">
                 <div class="card-header">
                     <h3 class="card-title">Módulo 4</h3>
-                    <h3 class="card-subtitle">JS assíncrono</h3>
+                    <h4 class="card-subtitle">JS assíncrono</h4>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Requisições AJAX</li>

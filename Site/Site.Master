@@ -21,7 +21,7 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <%--FONT AWESOME--%>
-    <script src="https://kit.fontawesome.com/c0a130f7f7.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c0a130f7f7.js"></script>
 </head>
 <body>
     <form runat="server">
@@ -62,8 +62,14 @@
                             Curso JavaScript
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <asp:HyperLink runat="server" ID="linkIntro" ClientIDMode="Static" CssClass="dropdown-item">Indtrodução</asp:HyperLink>
-                            <asp:HyperLink runat="server" ID="linkMod1" ClientIDMode="Static" CssClass="dropdown-item">Módulo 01</asp:HyperLink>
+                            <asp:HyperLink runat="server" ID="linkIntro" ClientIDMode="Static"
+                                CssClass="dropdown-item">Indtrodução</asp:HyperLink>
+                            <asp:HyperLink runat="server" ID="linkMod1" ClientIDMode="Static"
+                                CssClass="dropdown-item">Módulo 01</asp:HyperLink>
+                            <asp:HyperLink runat="server" ID="linkMod2" ClientIDMode="Static"
+                                CssClass="dropdown-item">Módulo 02</asp:HyperLink>
+                            <%// TODO: criar página com a resolucao dos exercicios do modulo 04 %>
+                            <%// FIXME: lembrar de adicionar endereço no backend %>
                         </div>
                     </li>
                 </ul>

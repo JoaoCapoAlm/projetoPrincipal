@@ -20,6 +20,7 @@ namespace Site
             linkValidDoc.NavigateUrl = rootSite + "Pagina/ValidaDoc.aspx";
             linkIntro.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Introducao.aspx";
             linkMod1.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo1.aspx";
+            linkMod2.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo2.aspx";
         }
     }
 }
