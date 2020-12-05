@@ -45,26 +45,29 @@
             </Scripts>
         </asp:ScriptManager>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="/">Projeto</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a runat="server" class="nav-link" href="~/">Página Inicial</a></li>
-                <li class="nav-item"><a runat="server" class="nav-link" href="~/Pagina/ValidaDoc.aspx">Valida Documento</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Curso JavaScript
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a runat="server" class="dropdown-item" href="~/Cursos/Starter/JavaScript/Introducao.aspx">Indtrodução</a>
-                        <a runat="server" class="dropdown-item" href="~/Cursos/Starter/JavaScript/Modulo1.aspx">Módulo 01</a>
-                    </div>
-                </li>
-            </ul>
-          </div>
+            <asp:HyperLink runat="server" ID="linkHome" ClientIDMode="Static" CssClass="navbar-brand">Projeto</asp:HyperLink>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <asp:HyperLink runat="server" ID="linkHomePage" ClientIDMode="Static" CssClass="nav-link">Página Inicial</asp:HyperLink>
+                    </li>
+                    <li class="nav-item">
+                        <asp:HyperLink runat="server" CssClass="nav-link" ID="linkValidDoc" ClientIDMode="Static">Valida Documento</asp:HyperLink>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Curso JavaScript
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <asp:HyperLink runat="server" ID="linkIntro" ClientIDMode="Static" CssClass="dropdown-item">Indtrodução</asp:HyperLink>
+                            <asp:HyperLink runat="server" ID="linkMod1" ClientIDMode="Static" CssClass="dropdown-item">Módulo 01</asp:HyperLink>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <main>
             <div class="container body-content">

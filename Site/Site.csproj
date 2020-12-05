@@ -110,6 +110,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Cursos\Starter\JavaScript\Introducao.aspx" />
     <Content Include="Cursos\Starter\JavaScript\Modulo1.aspx" />
+    <Content Include="Cursos\Starter\JavaScript\Modulo2.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -245,6 +246,13 @@
     </Compile>
     <Compile Include="Cursos\Starter\JavaScript\Modulo1.aspx.designer.cs">
       <DependentUpon>Modulo1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos\Starter\JavaScript\Modulo2.aspx.cs">
+      <DependentUpon>Modulo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cursos\Starter\JavaScript\Modulo2.aspx.designer.cs">
+      <DependentUpon>Modulo2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
