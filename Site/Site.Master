@@ -45,20 +45,24 @@
             </Scripts>
         </asp:ScriptManager>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <asp:HyperLink runat="server" ID="linkHome" ClientIDMode="Static" CssClass="navbar-brand">Projeto</asp:HyperLink>
+            <asp:HyperLink runat="server" ID="linkHome" ClientIDMode="Static"
+                CssClass="navbar-brand">Projeto</asp:HyperLink>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <asp:HyperLink runat="server" ID="linkHomePage" ClientIDMode="Static" CssClass="nav-link">Página Inicial</asp:HyperLink>
+                        <asp:HyperLink runat="server" ID="linkHomePage" ClientIDMode="Static"
+                            CssClass="nav-link">Página Inicial</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink runat="server" CssClass="nav-link" ID="linkValidDoc" ClientIDMode="Static">Valida Documento</asp:HyperLink>
+                        <asp:HyperLink runat="server" CssClass="nav-link" ID="linkValidDoc"
+                            ClientIDMode="Static">Valida Documento</asp:HyperLink>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Curso JavaScript
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -68,8 +72,8 @@
                                 CssClass="dropdown-item">Módulo 01</asp:HyperLink>
                             <asp:HyperLink runat="server" ID="linkMod2" ClientIDMode="Static"
                                 CssClass="dropdown-item">Módulo 02</asp:HyperLink>
-                            <%// TODO: criar página com a resolucao dos exercicios do modulo 04 %>
-                            <%// FIXME: lembrar de adicionar endereço no backend %>
+                            <asp:HyperLink runat="server" ID="linkMod4" ClientIDMode="Static"
+                                CssClass="dropdown-item">Módulo 04</asp:HyperLink>
                         </div>
                     </li>
                 </ul>

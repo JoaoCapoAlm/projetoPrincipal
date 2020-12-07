@@ -5,10 +5,8 @@
         <h3 class="display-5">Introdução JavaScript</h3>
     </div>
     <div class="row">
-        <div class="container">
-            <div class="exercice">
-                <h3>Exercícios 1 e 2</h3>
-            </div>
+        <div class="exercice">
+            <h3>Exercícios 1 e 2</h3>
         </div>
         <div class="col-md-6">
             <div class="card mb20">

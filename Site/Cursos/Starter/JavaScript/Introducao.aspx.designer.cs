@@ -13,5 +13,32 @@ namespace Site.Cursos.Starter.JavaScript
 
     public partial class Introducao
     {
+
+        /// <summary>
+        /// btnDesafio1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink btnDesafio1;
+
+        /// <summary>
+        /// btnDesafio2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink btnDesafio2;
+
+        /// <summary>
+        /// btnDesafio4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink btnDesafio4;
     }
 }
