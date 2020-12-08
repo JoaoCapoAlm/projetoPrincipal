@@ -7,17 +7,16 @@
             Esse projeto demostra um pouco do conhecimento que possúo e também para praticar um
             pouco do conhecimento que venho adquirindo com o tempo.
         </p>
-        <p class="lead">
+        <hr />
+        <p>
             Outros projetos feitos por mim estão disponíveis atualmente no GitHub. Caso precise, envie uma mensagem pelo LinkedIn.
         </p>
-        <p>
-            <a href="https://github.com/JoaoCapoAlm/" target="_blank" class="btn btn-info btn-lg"><i class="fab fa-github"></i> GitHub &raquo;</a>
-            <a href="https://www.linkedin.com/in/joao-capoani/" target="_blank" class="btn btn-info btn-lg"><i class="fab fa-linkedin"></i> LinkedIn &raquo;</a>
-        </p>
+        <a href="https://github.com/JoaoCapoAlm/" target="_blank" class="btn btn-info btn-lg"><i class="fab fa-github"></i> GitHub &raquo;</a>
+        <a href="https://www.linkedin.com/in/joao-capoani/" target="_blank" class="btn btn-info btn-lg"><i class="fab fa-linkedin"></i> LinkedIn &raquo;</a>
     </div>
 
     <section class="row">
-        <div class="col-md-4 mb20">
+        <div class="col-md-4 mb-3">
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Validação de Documento</h3>
@@ -28,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb20">
+        <div class="col-md-4 mb-3">
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Curso JavaScript</h3>

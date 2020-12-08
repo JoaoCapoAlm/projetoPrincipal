@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Modulo2.aspx.cs" Inherits="Site.Cursos.Starter.JavaScript.Modulo2" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
+    CodeBehind="Modulo2.aspx.cs" Inherits="Site.Cursos.Starter.JavaScript.Modulo2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
         <h1 class="display-3">Módulo 02</h1>
@@ -9,7 +10,7 @@
             <h3>Exercícios 1 e 2</h3>
         </div>
         <div class="col-md-6">
-            <div class="card mb20">
+            <div class="card mb-3">
                 <div class="card-header">
                     <h5 class="card-title">Enunciado exercício 1</h5>
                 </div>
@@ -64,7 +65,7 @@ var newColor = getRandomColor();</code></pre>
             <h3>Exercícios 3 e 4</h3>
         </div>
         <div class="col-md-6">
-            <div class="card mb20">
+            <div class="card mb-3">
                 <div class="card-header">
                     <h5 class="card-title">Enunciado</h5>
                 </div>
@@ -91,7 +92,7 @@ temHabilidade(skills);
                     </p>
                 </div>
             </div>
-            <div class="card mb20">
+            <div class="card mb-3">
                 <div class="card-header">
                     <h5 class="card-title">Enunciado</h5>
                 </div>
@@ -115,7 +116,7 @@ temHabilidade(skills);
             </div>
         </div>
         <div class="col-md-6 marginAuto">
-            <div class="card mb20">
+            <div class="card mb-3">
                 <div class="card-body">
                     <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="txtHability" Text="Habilidade" />
@@ -132,10 +133,8 @@ temHabilidade(skills);
                 </div>
             </div>
             <div class="card">
-                <div class="card-body">
-                    <ul id="listHabilities">
-                    </ul>
-                </div>
+                <ul id="listHabilities" class="list-group list-group-flush">
+                </ul>
                 <div class="card-footer">
                     <asp:Label runat="server" ID="lblHasJS" ClientIDMode="Static"
                         Text="JavaScript não adicionado" />
@@ -169,7 +168,7 @@ temHabilidade(skills);
                     Math.floor(Math.random() * 16)
                 ];
             }
-            console.log(color);
+            
             return color; //#E943F0
         }
 
@@ -197,7 +196,7 @@ temHabilidade(skills);
             habilities.sort();
             
             habilities.forEach(hability => {
-                lista.innerHTML += `<li>${hability}</li>`;
+                lista.innerHTML += `<li class='list-group-item'>${hability}</li>`;
             });
 
             if (newHability.toString().toLowerCase() === 'javascript') {

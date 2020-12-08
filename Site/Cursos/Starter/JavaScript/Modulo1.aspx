@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Modulo1.aspx.cs" Inherits="Site.Cursos.Starter.JavaScript.Modulo1" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
+    CodeBehind="Modulo1.aspx.cs" Inherits="Site.Cursos.Starter.JavaScript.Modulo1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
         <h1 class="display-3">Módulo 01</h1>

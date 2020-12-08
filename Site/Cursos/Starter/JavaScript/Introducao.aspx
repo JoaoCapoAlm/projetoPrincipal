@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Introducao.aspx.cs" Inherits="Site.Cursos.Starter.JavaScript.Introducao" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
+    CodeBehind="Introducao.aspx.cs" Inherits="Site.Cursos.Starter.JavaScript.Introducao" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
         <h1 class="display-3">Curso Starter JavaScript</h1>
@@ -9,7 +10,7 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <div class="card mb20">
+            <div class="card mb-3">
                 <div class="card-header">
                     <h3 class="card-title">Módulo 1</h3>
                     <h4 class="card-subtitle">Introdução ao JavaScript</h4>
@@ -31,7 +32,7 @@
             </div>
         </div>
         <div class="col-md-6 marginAuto">
-            <div class="card mb20">
+            <div class="card mb-3">
                 <div class="card-header">
                     <h3 class="card-title">Módulo 2</h3>
                     <h4 class="card-subtitle">Manipulando a DOM</h4>
@@ -51,7 +52,7 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <div class="card mb20">
+            <div class="card mb-3">
                 <div class="card-header">
                     <h3 class="card-title">Módulo 3</h3>
                     <h4 class="card-subtitle">App de Todos</h4>
@@ -70,7 +71,7 @@
             </div>
         </div>
         <div class="col-md-6 marginAuto">
-            <div class="card mb20">
+            <div class="card mb-3">
                 <div class="card-header">
                     <h3 class="card-title">Módulo 4</h3>
                     <h4 class="card-subtitle">JS assíncrono</h4>
