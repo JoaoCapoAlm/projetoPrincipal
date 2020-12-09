@@ -17,12 +17,9 @@ namespace BLL
         /// <returns>Retorna o texto cifrado.</returns>
         public static string CifraCesar(string original, int number)
         {
-            original = original.ToLower().Replace("ç", "c");
-            original = original.Replace("á", "a").Replace("à", "a").Replace("â", "a").Replace("ã", "a");
-            original = original.Replace("é", "e").Replace("è", "e").Replace("ê", "e");
-            original = original.Replace("í", "i").Replace("ì", "i").Replace("î", "i");
-            original = original.Replace("ó", "o").Replace("ò", "o").Replace("ô", "o").Replace("õ", "o");
-            original = original.Replace("ú", "u").Replace("ù", "u").Replace("û", "u");
+            /* Remover acentos */
+            original = Helper.StringHelp.RemoveAccents(original.ToLower());
+
             string encrypt = string.Empty;
 
             for (int i = 0; i < original.Length; i++)
