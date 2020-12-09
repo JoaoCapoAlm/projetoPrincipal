@@ -13,11 +13,10 @@
             Outros projetos feitos por mim estão disponíveis atualmente no GitHub.
             Caso precise, envie uma mensagem pelo LinkedIn.
         </p>
-        <a href="https://github.com/JoaoCapoAlm/" target="_blank" class="btn btn-info btn-lg">
+        <a href="https://github.com/JoaoCapoAlm/" target="_blank" rel="noopener noreferrer" class="btn btn-info btn-lg">
             <i class="fab fa-github"></i> GitHub &raquo;
         </a>
-        <a href="https://www.linkedin.com/in/joao-capoani/" target="_blank"
-            class="btn btn-info btn-lg">
+        <a href="https://www.linkedin.com/in/joao-capoani/" target="_blank" class="btn btn-info btn-lg" rel="noopener noreferrer">
             <i class="fab fa-linkedin"></i> LinkedIn &raquo;
         </a>
     </div>
@@ -28,8 +27,11 @@
                     <h3 class="card-title">Validação de Documento</h3>
                 </div>
                 <div class="card-body">
-                    <p>Faça a validação dos números dos documentos de CPF, CNPJ e PIS.</p>
-                    <p class="text-center"><a class="btn btn-primary" href="Pagina/ValidaDoc.aspx">Validação &raquo;</a></p>
+                    <p>Faça a validação dos números dos documentos de CPF, CNH, CNPJ e PIS.</p>
+                    <p class="text-center">
+                        <asp:HyperLink runat="server" ID="btnValidaDoc" ClientIDMode="Static" CssClass="btn btn-primary"
+                            Text="Validação &raquo;" />
+                    </p>
                 </div>
             </div>
         </div>
@@ -40,12 +42,25 @@
                 </div>
                 <div class="card-body">
                     <p>Veja a resolução dos exercícios do curso Starter JavaScript da Rocketseat.</p>
-                    <p class="text-center"><a class="btn btn-primary" href="Cursos/Starter/JavaScript/Introducao.aspx">Curso &raquo;</a></p>
+                    <p class="text-center">
+                        <asp:HyperLink runat="server" ID="btnCursoJS" ClientIDMode="Static" CssClass="btn btn-primary"
+                            Text="Curso &raquo;" />
+                    </p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
-            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Cifra de César</h3>
+                </div>
+                <div class="card-body">
+                    <p>Quer enviar uma mensagem para alguém escondido? Cifre o texto com a Cifra de César!</p>
+                    <p class="text-center">
+                        <asp:HyperLink runat="server" ID="btnCifraCesar" ClientIDMode="Static" CssClass="btn btn-primary" Text="Cifra de César" />
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
     <div class="row">

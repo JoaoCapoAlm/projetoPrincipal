@@ -24,15 +24,6 @@ namespace Site.Validacao
         protected global::System.Web.UI.WebControls.TextBox txtCpf;
 
         /// <summary>
-        /// RequiredFieldValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator;
-
-        /// <summary>
         /// lblMsgCpfValid control.
         /// </summary>
         /// <remarks>
@@ -58,15 +49,6 @@ namespace Site.Validacao
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCnpj;
-
-        /// <summary>
-        /// rfvCnpj control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCnpj;
 
         /// <summary>
         /// lblValidCnpj control.
@@ -96,15 +78,6 @@ namespace Site.Validacao
         protected global::System.Web.UI.WebControls.TextBox txtPis;
 
         /// <summary>
-        /// RFVPis control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVPis;
-
-        /// <summary>
         /// lblValidPis control.
         /// </summary>
         /// <remarks>
@@ -121,5 +94,32 @@ namespace Site.Validacao
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnValidarPis;
+
+        /// <summary>
+        /// txtCnh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCnh;
+
+        /// <summary>
+        /// lblValidCnh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblValidCnh;
+
+        /// <summary>
+        /// btnValidarCnh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnValidarCnh;
     }
 }

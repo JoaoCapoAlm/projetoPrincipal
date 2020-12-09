@@ -13,5 +13,32 @@ namespace Site
 
     public partial class _Default
     {
+
+        /// <summary>
+        /// btnValidaDoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink btnValidaDoc;
+
+        /// <summary>
+        /// btnCursoJS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink btnCursoJS;
+
+        /// <summary>
+        /// btnCifraCesar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink btnCifraCesar;
     }
 }

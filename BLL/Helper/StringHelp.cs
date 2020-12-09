@@ -28,5 +28,10 @@ namespace BLL.Helper
             }
             return text;
         }
+
+        public static bool AllCharsEquals(string value)
+        {
+            return value.Distinct().Count() == 1;
+        }
     }
 }

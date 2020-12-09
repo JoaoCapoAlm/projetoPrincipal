@@ -17,57 +17,64 @@ namespace Site.Validacao
 
         protected void btnValidCpf_Click(object sender, EventArgs e)
         {
-            if (RequiredFieldValidator.IsValid)
+            bool isValid = DocumentBLL.ValidDocument.IsCpf(txtCpf.Text);
+            if (isValid)
             {
-                bool isValid = DocumentBLL.ValidDocument.IsCpf(txtCpf.Text);
-                if (isValid)
-                {
-                    lblMsgCpfValid.Text = "CPF válido!";
-                    lblMsgCpfValid.Style.Remove("color");
-                }
-                else
-                {
-                    lblMsgCpfValid.Text = "CPF inválido!";
-                    lblMsgCpfValid.Style.Add("color", "red");
-                }
+                lblMsgCpfValid.Text = "CPF válido!";
+                lblMsgCpfValid.CssClass = string.Empty;
+            }
+            else
+            {
+                lblMsgCpfValid.Text = "CPF inválido!";
+                lblMsgCpfValid.CssClass = "error";
             }
         }
 
         protected void btnValidCnpj_Click(object sender, EventArgs e)
         {
-            if (rfvCnpj.IsValid)
-            {
-                bool isValid = DocumentBLL.ValidDocument.IsCnpj(txtCnpj.Text);
+            bool isValid = DocumentBLL.ValidDocument.IsCnpj(txtCnpj.Text);
 
-                if (isValid)
-                {
-                    lblValidCnpj.Text = "CNPJ válido!";
-                    lblValidCnpj.Style.Remove("color");
-                }
-                else
-                {
-                    lblValidCnpj.Text = "CNPJ inválido";
-                    lblValidCnpj.Style.Add("color", "red");
-                }
+            if (isValid)
+            {
+                lblValidCnpj.Text = "CNPJ válido!";
+                lblValidCnpj.CssClass = string.Empty;
+            }
+            else
+            {
+                lblValidCnpj.Text = "CNPJ inválido";
+                lblValidCnpj.CssClass = "error";
             }
         }
 
         protected void btnValidarPis_Click(object sender, EventArgs e)
         {
-            if (RFVPis.IsValid)
-            {
-                bool isValid = DocumentBLL.ValidDocument.IsPis(txtPis.Text);
+            bool isValid = DocumentBLL.ValidDocument.IsPis(txtPis.Text);
 
-                if (isValid)
-                {
-                    lblValidPis.Text = "PIS válido!";
-                    lblValidPis.Style.Remove("color");
-                }
-                else
-                {
-                    lblValidPis.Text = "PIS inválido!";
-                    lblValidPis.Style.Add("color", "red");
-                }
+            if (isValid)
+            {
+                lblValidPis.Text = "PIS válido!";
+                lblValidPis.CssClass = string.Empty;
+            }
+            else
+            {
+                lblValidPis.Text = "PIS inválido!";
+                lblValidPis.CssClass = "error";
+            }
+        }
+
+        protected void btnValidarCnh_Click(object sender, EventArgs e)
+        {
+            bool isValid = DocumentBLL.ValidDocument.IsCnh(txtCnh.Text);
+
+            if (isValid)
+            {
+                lblValidCnh.Text = "CNH válido!";
+                lblValidCnh.CssClass = string.Empty;
+            }
+            else
+            {
+                lblValidCnh.Text = "CNH inválido!";
+                lblValidCnh.CssClass = "error";
             }
         }
     }

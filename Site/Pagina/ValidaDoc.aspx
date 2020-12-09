@@ -9,19 +9,18 @@
         </p>
     </div>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6 mb-3">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Valida CPF</h5>
+                    <h5 class="card-title">Validar CPF</h5>
                 </div>
                 <div class="card-body">
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="txtCpf">CPF:</label>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCpf" CssClass="error"
+                                ErrorMessage="Campo obrigatório!" ValidationGroup="cpf" />
                             <asp:TextBox runat="server" ID="txtCpf" ClientIDMode="Static" CssClass="form-control" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCpf"
-                                CssClass="error form-text" ErrorMessage="Campo obrigatório!" ID="RequiredFieldValidator"
-                                ClientIDMode="Static" ValidationGroup="cpf" />
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -34,19 +33,18 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6 mb-3">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Valida CNPJ</h5>
+                    <h5 class="card-title">Validar CNPJ</h5>
                 </div>
                 <div class="card-body">
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="txtCnpj">CNPJ:</label>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCnpj" CssClass="error"
+                                ErrorMessage="Campo obrigatório!" ValidationGroup="cnpj" />
                             <asp:TextBox runat="server" ID="txtCnpj" ClientIDMode="Static" CssClass="form-control" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCnpj"
-                                CssClass="error form-text" ErrorMessage="Campo obrigatório!" ID="rfvCnpj"
-                                ClientIDMode="Static" ValidationGroup="cnpj" />
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -59,20 +57,18 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6 mb-3">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Valida PIS</h5>
+                    <h5 class="card-title">Validar PIS</h5>
                 </div>
                 <div class="card-body">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="txtPis">PIS:</label>
-                            <asp:TextBox runat="server" ID="txtPis" ClientIDMode="Static" CssClass="form-control" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPis"
-                                CssClass="error form-text" ErrorMessage="Campo obrigatório!" ID="RFVPis"
-                                ClientIDMode="Static" ValidationGroup="pis" />
-                        </div>
+                    <div class="form-group">
+                        <label for="txtPis">PIS:</label>
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPis" CssClass="error"
+                            ErrorMessage="Campo obrigatório!" ValidationGroup="pis" />
+                        <asp:TextBox runat="server" ID="txtPis" ClientIDMode="Static" CssClass="form-control" />
+                        
                     </div>
                     <div class="col-md-12">
                         <asp:Label runat="server" ID="lblValidPis" ClientIDMode="Static" />
@@ -81,6 +77,28 @@
                 <div class="card-footer text-center">
                     <asp:Button runat="server" ID="btnValidarPis" ClientIDMode="Static" ValidationGroup="pis"
                         OnClick="btnValidarPis_Click" Text="Validar PIS" CssClass="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Validar CNH</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <asp:Label runat="server" AssociatedControlID="txtCnh" Text="CNH" />
+                        <asp:RequiredFieldValidator runat="server" CssClass="error" ControlToValidate="txtCnh" ValidationGroup="cnh"
+                            ErrorMessage="*Obrigatório" />
+                        <asp:TextBox runat="server" ID="txtCnh" ClientIDMode="Static" CssClass="form-control" />
+                    </div>
+                    <div class="col-md-12">
+                        <asp:Label runat="server" ID="lblValidCnh" ClientIDMode="Static" />
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <asp:Button runat="server" ID="btnValidarCnh" ClientIDMode="Static" ValidationGroup="cnh"
+                        OnClick="btnValidarCnh_Click" Text="Validar CNH" CssClass="btn btn-primary" />
                 </div>
             </div>
         </div>

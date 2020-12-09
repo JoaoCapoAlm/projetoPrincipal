@@ -18,7 +18,7 @@ namespace BLL
         public static string CifraCesar(string original, int number)
         {
             /* Remover acentos */
-            original = Helper.StringHelp.RemoveAccents(original.ToLower());
+            original = Helper.StringHelp.RemoveAccents(original);
 
             string encrypt = string.Empty;
 

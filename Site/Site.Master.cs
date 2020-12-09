@@ -21,6 +21,8 @@ namespace Site
             linkIntro.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Introducao.aspx";
             linkMod1.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo1.aspx";
             linkMod2.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo2.aspx";
-            linkMod4.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo4.aspx";        }
+            linkMod4.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo4.aspx";
+            linkCifraCesar.NavigateUrl = rootSite + "Pagina/ValidaDoc.aspx";
+        }
     }
 }
