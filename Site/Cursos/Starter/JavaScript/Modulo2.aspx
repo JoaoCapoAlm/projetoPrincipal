@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
+﻿<%@ Page Title="Cuso JS" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
     CodeBehind="Modulo2.aspx.cs" Inherits="Site.Cursos.Starter.JavaScript.Modulo2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">

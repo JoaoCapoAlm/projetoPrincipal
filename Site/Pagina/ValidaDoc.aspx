@@ -1,4 +1,6 @@
-﻿<%@ Page Title="Valida Documento" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ValidaDoc.aspx.cs" Inherits="Site.Validacao.ValidacaoCPF" %>
+﻿<%@ Page Title="Validação de Documento" Language="C#" MasterPageFile="~/Site.Master"
+    AutoEventWireup="true" CodeBehind="ValidaDoc.aspx.cs"
+    Inherits="Site.Validacao.ValidacaoCPF" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
         <h1>Validação de documento</h1>

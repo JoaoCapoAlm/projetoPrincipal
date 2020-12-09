@@ -1,7 +1,7 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Site.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs"
+    Inherits="Site.SiteMaster" %>
 
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head runat="server">
     <meta charset="utf-8" />
@@ -11,7 +11,7 @@
         name="description"
         content="Projeto feito para por prática programação conhecimentos que venho adquirindo."
     />
-    <title>Portifólio</title>
+    <title>João Almeida</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>

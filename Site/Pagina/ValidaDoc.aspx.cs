@@ -8,7 +8,7 @@ using BLL;
 
 namespace Site.Validacao
 {
-    public partial class ValidacaoCPF : System.Web.UI.Page
+    public partial class ValidacaoCPF : MainPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

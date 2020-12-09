@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
+﻿<%@ Page Title="Curso JS" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
     CodeBehind="Introducao.aspx.cs" Inherits="Site.Cursos.Starter.JavaScript.Introducao" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">

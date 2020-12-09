@@ -1,20 +1,26 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Site._Default" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
+    CodeBehind="Default.aspx.cs" Inherits="Site._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
         <h1>E esse projeto? Serve para que?</h1>
         <p class="lead">
-            Esse projeto demostra um pouco do conhecimento que possúo e também para praticar um
-            pouco do conhecimento que venho adquirindo com o tempo.
+            Esse projeto demostra um pouco do conhecimento que possúo e também para praticar
+            um pouco do conhecimento que venho adquirindo com o tempo.
         </p>
         <hr />
         <p>
-            Outros projetos feitos por mim estão disponíveis atualmente no GitHub. Caso precise, envie uma mensagem pelo LinkedIn.
+            Outros projetos feitos por mim estão disponíveis atualmente no GitHub.
+            Caso precise, envie uma mensagem pelo LinkedIn.
         </p>
-        <a href="https://github.com/JoaoCapoAlm/" target="_blank" class="btn btn-info btn-lg"><i class="fab fa-github"></i> GitHub &raquo;</a>
-        <a href="https://www.linkedin.com/in/joao-capoani/" target="_blank" class="btn btn-info btn-lg"><i class="fab fa-linkedin"></i> LinkedIn &raquo;</a>
+        <a href="https://github.com/JoaoCapoAlm/" target="_blank" class="btn btn-info btn-lg">
+            <i class="fab fa-github"></i> GitHub &raquo;
+        </a>
+        <a href="https://www.linkedin.com/in/joao-capoani/" target="_blank"
+            class="btn btn-info btn-lg">
+            <i class="fab fa-linkedin"></i> LinkedIn &raquo;
+        </a>
     </div>
-
     <section class="row">
         <div class="col-md-4 mb-3">
             <div class="card">
@@ -55,11 +61,10 @@
             </div>
         </div>
     </div>
-
 </asp:Content>
 <asp:Content runat="server" ID="ScriptContent" ContentPlaceHolderID="ScriptContent">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
+    <script type="text/javascript">
         $(document).ready(function () {
             getRepositories()
         })
@@ -104,8 +109,5 @@
                 .catch(function (error) { console.warn(error) });
             return;
         }
-
-
     </script>
-
 </asp:Content>
