@@ -11,32 +11,32 @@
                 <h3>Exercício 1</h3>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4 col-sm-6 mb-3">
             <div class="card">
                 <div class="card-header">
                     <h5 class="card-title">Enunciado</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">Crie uma função que dado o objeto a seguir:</p>
-                    <pre class="codigo"><code>var endereco =
-{
-    rua: "Rua dos pinheiros",
-    numero: 1293,
-    bairro: "Centro",
-    cidade: "São Paulo",
-    uf: "SP"
-};</code></pre>
+                    <div class="codigo">
+                        <code>
+                            var endereco =
+                            {
+                                rua: "Rua dos pinheiros",
+                                numero: 1293,
+                                bairro: "Centro",
+                                cidade: "São Paulo",
+                                uf: "SP"
+                            };
+                        </code>
+                    </div>
                     <p>Retorne o seguinte conteúdo:</p>
                     <samp>O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros"
                         com nº 1293.</samp>
                 </div>
-                <div class="card-footer">
-                    <h5>Resposta</h5>
-                    <span id="txtAddress"></span>
-                </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4 col-sm-6 mb-3">
             <div class="card">
                 <div class="card-body">
                     <div class="form-group">
@@ -84,14 +84,19 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="container">
-            <div class="exercice">
-                <h3>Exercício 2</h3>
+        <div class="col-md-4 col-sm-6 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <asp:Label runat="server" ID="txtAddress" ClientIDMode="Static" />
+                </div>
             </div>
         </div>
-        <div class="col-md-6">
+    </div>
+    <div class="row">
+        <div class="exercice">
+            <h3>Exercício 2</h3>
+        </div>
+        <div class="col-md-6 mb-3">
             <div class="card">
                 <div class="card-header">
                     <h5 class="card-title">Enunciado</h5>
@@ -107,7 +112,7 @@ pares(32, 321);</code></pre>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mb-3">
             <div class="card">
                 <div  class="card-body">
                     <div class="form-group">
@@ -138,7 +143,7 @@ pares(32, 321);</code></pre>
                 <h3>Exercício 4</h3>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mb-3">
             <div class="card">
                 <div class="card-header">
                     <h5 class="card-title">Enunciado</h5>
@@ -156,7 +161,7 @@ experiência(anosEstudo);</code></pre>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mb-3">
             <div class="card">
                 <div class="card-body">
                     <div class="form-group">
@@ -189,8 +194,10 @@ experiência(anosEstudo);</code></pre>
 <asp:Content ID="Content2" ContentPlaceHolderID="ScriptContent" runat="server">
     <script>
         function setAddress() {
-            event.preventDefault();
-            event.stopPropagation();
+            if (event != null) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
 
             if (!Page_ClientValidate('address')) {
                 $('#ddlState').focus();

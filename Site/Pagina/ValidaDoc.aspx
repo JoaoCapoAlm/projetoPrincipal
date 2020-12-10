@@ -20,7 +20,7 @@
                             <label for="txtCpf">CPF:</label>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCpf" CssClass="error"
                                 ErrorMessage="Campo obrigatório!" ValidationGroup="cpf" />
-                            <asp:TextBox runat="server" ID="txtCpf" ClientIDMode="Static" CssClass="form-control" />
+                            <asp:TextBox runat="server" ID="txtCpf" ClientIDMode="Static" CssClass="form-control CPFMask" />
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -44,7 +44,7 @@
                             <label for="txtCnpj">CNPJ:</label>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCnpj" CssClass="error"
                                 ErrorMessage="Campo obrigatório!" ValidationGroup="cnpj" />
-                            <asp:TextBox runat="server" ID="txtCnpj" ClientIDMode="Static" CssClass="form-control" />
+                            <asp:TextBox runat="server" ID="txtCnpj" ClientIDMode="Static" CssClass="form-control CNPJMask" />
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -83,7 +83,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Validar CNH</h5>
+                    <h5 class="card-title">Validar CNH:</h5>
                 </div>
                 <div class="card-body">
                     <div class="form-group">
@@ -105,4 +105,11 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ScriptContent" runat="server">
+    <script>
+        $(document).ready(function () {
+            const Masked = Mascaras(true);
+            Masked.CPFMask();
+            Masked.CNPJMask();
+        })
+    </script>
 </asp:Content>

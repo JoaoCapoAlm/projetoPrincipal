@@ -18,11 +18,16 @@ nav {
     color: red;
 }
 
+code {
+    color: white;
+}
+
 .codigo {
     padding: 10px;
     margin: 5px 0;
     background-color: #484848;
     color: white;
+    width: 100%;
 }
 
 .exercice {

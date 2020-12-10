@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Site
 {
@@ -14,6 +10,8 @@ namespace Site
         protected void Page_Load(object sender, EventArgs e)
         {
             rootSite = ConfigurationManager.AppSettings["ROOT_SITE"];
+
+            sc.Scripts.Add(new ScriptReference { Path = "/Scripts/main.js" });
 
             linkHome.NavigateUrl = rootSite;
             linkHomePage.NavigateUrl = rootSite;

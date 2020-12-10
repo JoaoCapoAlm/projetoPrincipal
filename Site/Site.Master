@@ -24,8 +24,8 @@
     <script src="https://kit.fontawesome.com/c0a130f7f7.js"></script>
 </head>
 <body>
-    <form runat="server">
-        <asp:ScriptManager runat="server">
+    <form runat="server" submitdisabledcontrols="true">
+        <asp:ScriptManager runat="server" ID="sc" ClientIDMode="Static" EnableScriptLocalization="true" EnablePageMethods="true">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
@@ -44,6 +44,9 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+            integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" crossorigin="anonymous"
+></script>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <asp:HyperLink runat="server" ID="linkHome" ClientIDMode="Static"
                 CssClass="navbar-brand">Projeto</asp:HyperLink>
@@ -94,6 +97,7 @@
             </div>
         </footer>
         <asp:ContentPlaceHolder ID="ScriptContent" runat="server"></asp:ContentPlaceHolder>
+        
     </form>
 </body>
 </html>
