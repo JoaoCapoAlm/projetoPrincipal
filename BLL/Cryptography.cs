@@ -15,21 +15,37 @@ namespace BLL
         /// <param name="original"></param>
         /// <param name="number"></param>
         /// <returns>Retorna o texto cifrado.</returns>
-        public static string CifraCesar(string original, int number)
+        public static string CifraCesar(string original = null, int number = 0)
         {
-            /* Remover acentos */
+            if (string.IsNullOrWhiteSpace(original))
+                return string.Empty;
+
             original = Helper.StringHelp.RemoveAccents(original);
 
             string encrypt = string.Empty;
 
             for (int i = 0; i < original.Length; i++)
             {
-                int letter = Convert.ToInt32(original[i]) + number;
+                int letter = Convert.ToInt32(original[i]);
 
-                if (letter > 122)
-                    letter -= 26;
-                else if (letter < 97)
-                    letter += 26;
+                if(letter >= 97 && letter <= 122)
+                {
+                    letter += number;
+
+                    if (letter > 122)
+                        letter -= 26;
+                    else if (letter < 97)
+                        letter += 26;
+                }
+                else if (letter >= 65 && letter <= 90)
+                {
+                    letter += number;
+
+                    if (letter > 90)
+                        letter -= 26;
+                    else if(letter < 65)
+                        letter += 26;
+                }
 
                 encrypt += Convert.ToChar(letter);
             }

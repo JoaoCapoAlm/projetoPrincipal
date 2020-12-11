@@ -20,15 +20,20 @@ namespace BLL.Helper
                 return string.Empty;
 
             string whitAccents = "ÄÅÁÂÀÃäáâàãÉÊËÈéêëèÍÎÏÌíîïìÖÓÔÒÕöóôòõÜÚÛÙüúûùÇçÑñ";
-            string whitoutAcentos = "AAAAAAaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUUuuuuCcNn";
+            string whitoutAcents = "AAAAAAaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUUuuuuCcNn";
 
             for (int i = 0; i < whitAccents.Length; i++)
             {
-                text = text.Replace(whitAccents[i].ToString(), whitoutAcentos[i].ToString());
+                text = text.Replace(whitAccents[i].ToString(), whitoutAcents[i].ToString());
             }
             return text;
         }
 
+        /// <summary>
+        /// Verifica se todos caracteres são iguais.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static bool AllCharsEquals(string value)
         {
             return value.Distinct().Count() == 1;
