@@ -12,42 +12,49 @@ namespace BLL
         /// Faz a troca de cada letra da mensagem original pela letra que se situa
         /// X posições à sua frente.
         /// </summary>
-        /// <param name="original"></param>
-        /// <param name="number"></param>
+        /// <param name="original">Texto original a ser cifrado.</param>
+        /// <param name="number">Número equivalente ao deslocamento das letras.</param>
         /// <returns>Retorna o texto cifrado.</returns>
-        public static string CifraCesar(string original = null, int number = 0)
+        public static string CifraCesar(string original, int number = 0)
         {
             if (string.IsNullOrWhiteSpace(original))
                 return string.Empty;
 
-            original = Helper.StringHelp.RemoveAccents(original);
+            if (number == 0)
+                return original.Trim();
 
-            string encrypt = string.Empty;
-
+            original = Helper.StringHelp.RemoveAccents(original.Trim());
+            
+            var encrypt = string.Empty;
+            string alphabet = "abcdefghijklmnoprqrstuvwxyz";
+            string alphabet2 = alphabet.ToUpper();
+            
             for (int i = 0; i < original.Length; i++)
             {
-                int letter = Convert.ToInt32(original[i]);
-
-                if(letter >= 97 && letter <= 122)
+                bool isMaiusculo = false;
+                
+                int indexLetter = alphabet.IndexOf(original[i]);
+                if (indexLetter == -1)
                 {
-                    letter += number;
-
-                    if (letter > 122)
-                        letter -= 26;
-                    else if (letter < 97)
-                        letter += 26;
-                }
-                else if (letter >= 65 && letter <= 90)
-                {
-                    letter += number;
-
-                    if (letter > 90)
-                        letter -= 26;
-                    else if(letter < 65)
-                        letter += 26;
+                    indexLetter = alphabet2.IndexOf(original[i]);
+                    isMaiusculo = true;
                 }
 
-                encrypt += Convert.ToChar(letter);
+                int index = number + indexLetter;
+
+                if (index == -1)
+                {
+                    encrypt += original[i];
+                    continue;
+                }
+                
+                while (index > alphabet.Length)
+                    index -= alphabet.Length;
+
+                if (isMaiusculo)
+                    encrypt += alphabet2[index];
+                else
+                    encrypt += alphabet[index];
             }
 
             return encrypt;

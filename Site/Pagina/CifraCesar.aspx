@@ -38,7 +38,7 @@
                             Display="Dynamic" ErrorMessage="*Obrigatório" CssClass="error"
                             ValidationGroup="cesar" ID="requiredOriginal" ClientIDMode="Static" />
                         <asp:TextBox runat="server" TextMode="MultiLine" Rows="6" CssClass="form-control"
-                            MaxLength="255" ID="txtOriginal" ClientIDMode="Static" />
+                            MaxLength="254" ID="txtOriginal" ClientIDMode="Static" />
                     </div>
                     <div class="text-center">
                         <asp:Button runat="server" OnClick="txtOriginal_Click" Text="Cripto" ID="btnCesar"
