@@ -21,7 +21,16 @@ namespace Site
             linkMod2.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo2.aspx";
             linkMod4.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo4.aspx";
             linkCifraCesar.NavigateUrl = rootSite + "Pagina/CifraCesar.aspx";
-            linkCifraCesar.Visible = false;
+            linkConversor.NavigateUrl = rootSite + "Pagina/Conversor.aspx";
+
+            // TODO: Conversor de temperatura.
+            // TODO: Conversor de base númerica.
+            // TODO: Alistamento militar.
+            // TODO: Se é ano bisexo. DateTime.IsLeapYear(year)
+            // TODO: Qual número é maior.
+            // TODO: IMC.
+            // TODO: Sequência de Fibonacci.
+            // TODO: Contador de vogais.
         }
     }
 }

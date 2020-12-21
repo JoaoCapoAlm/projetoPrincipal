@@ -1,14 +1,4 @@
-﻿function loading() {
-    var load = '<div class="d-flex justify-content-center">';
-    load += '<div class="spinner-border" role = "status">';
-    load += '<span class="sr-only">Carregando...</span>';
-    load += '</div>';
-    load += '</div>';
-
-    return load;
-}
-
-$('.loading').html = loading();
+﻿var root = window.location.protocol + '//' + window.location.host;
 
 function Mascaras(nacional = true) {
     function telefoneCelular() {

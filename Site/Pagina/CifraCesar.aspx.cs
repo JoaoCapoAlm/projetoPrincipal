@@ -14,7 +14,12 @@ namespace Site.Pagina
         {
 
         }
-
+        /// <summary>
+        /// Envia o texto e o número de deslocamento escritos pelo usuário para
+        /// o método CifraCesar e apresenta o novo texto após a cifra
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void txtOriginal_Click(object sender, EventArgs e)
         {
             try
@@ -23,11 +28,6 @@ namespace Site.Pagina
                 int number = Convert.ToInt32(txtNumber.Text);
                 txtCriptografia.Text = Cryptography.CifraCesar(text, number);
                 txtCriptografia.CssClass = "";
-            }
-            catch (FormatException)
-            {
-                txtCriptografia.Text = "Formato do número incorreto";
-                txtCriptografia.CssClass = "error";
             }
             catch (Exception ex)
             {

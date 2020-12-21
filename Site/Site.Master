@@ -45,8 +45,7 @@
             </Scripts>
         </asp:ScriptManager>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
-            integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" crossorigin="anonymous"
-></script>
+            integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" crossorigin="anonymous"></script>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <asp:HyperLink runat="server" ID="linkHome" ClientIDMode="Static"
                 CssClass="navbar-brand">Projeto</asp:HyperLink>
@@ -80,7 +79,12 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink runat="server" CssClass="nav-link" ID="linkCifraCesar" ClientIDMode="Static" Text="Cifra de César" />
+                        <asp:HyperLink runat="server" CssClass="nav-link" ID="linkCifraCesar"
+                            ClientIDMode="Static" Text="Cifra de César" />
+                    </li>
+                    <li class="nav-item">
+                        <asp:HyperLink runat="server" CssClass="nav-link" ID="linkConversor"
+                            ClientIDMode="Static" Text="Conversões" />
                     </li>
                 </ul>
             </div>
