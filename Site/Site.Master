@@ -86,6 +86,10 @@
                         <asp:HyperLink runat="server" CssClass="nav-link" ID="linkConversor"
                             ClientIDMode="Static" Text="Conversões" />
                     </li>
+                    <li class="nav-item">
+                        <asp:CheckBox runat="server" Checked="false" ID="cbTheme" ClientIDMode="Static" />
+                        <asp:Label runat="server" AssociatedControlID="cbTheme" Text="Tema escuro" />
+                    </li>
                 </ul>
             </div>
         </nav>
