@@ -58,7 +58,7 @@
                 typeOriginal = $('#ddlTemperatureOriginal').val(),
                 typeConvert = $('#ddlTemperatureConverted').on('select').val()
             }
-            debugger;
+            
             $.ajax({
                 type: 'POST',
                 data: JSON.stringify(sender),

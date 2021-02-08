@@ -50,7 +50,7 @@
         <div class="col-md-6">
             <div class="card" style="height: 100%;">
                 <div class="card-body">
-                    <asp:Label runat="server" ID="txtCriptografia" ClientIDMode="Static" />
+                    <asp:Label runat="server" ID="txtCryptography" ClientIDMode="Static" />
                 </div>
             </div>
         </div>

@@ -63,13 +63,13 @@
                         <a class="card-link" target="_blank" rel="nofollow noreferrer" href="https://api.github.com/users/diego3g/repos">https://api.github.com/users/diego3g/repos</a>
                     </p>
                     <p>Basta alterar "diego3g" pelo nome do usuário.</p>
-                    <pre class="codigo"><code>&lt;input type="text" name="user"&gt;
+                    <pre class="code"><code>&lt;input type="text" name="user"&gt;
 &lt;button onclick=""&gt;Adicionar&lt;/button&gt;</code></pre>
                     <p>
                         Depois de preencher o input e adicionar, a seguinte lista deve
                         aparecer abaixo:
                     </p>
-                    <pre class="codigo"><code>&lt;ul&gt;
+                    <pre class="code"><code>&lt;ul&gt;
     &lt;li&gt;repo1&lt;/li&gt;
     &lt;li&gt;repo2&lt;/li&gt;
     &lt;li&gt;repo3&lt;/li&gt;
@@ -124,23 +124,23 @@
 
             if (!Page_ClientValidate('repositoriries')) {
                 $('#txtGit').focus();
-                return;
+                return false;
             }
 
             const list = document.getElementById('listRepositories');
-            list.innerHTML = '<li id="liAviso">Carregando...</li>';
+            list.innerHTML = '<li id="liWarning">Carregando...</li>';
 
-            const aviso = $('#liAviso');
+            const aviso = $('#liWarning');
 
             const user = $('#txtGit').val();
             var repos = [];
 
             axios.get(`https://api.github.com/users/${user}/repos`)
                 .then(function (response) {
-                    var resposta = response.data;
+                    const { data } = response;
 
                     list.innerHTML = '';
-                    resposta.forEach(item => repos.push(item.name));
+                    data.forEach(item => repos.push(item.name));
                     repos.sort();
                     repos.forEach(repo => {
                         const item = document.createElement('li');
@@ -151,6 +151,8 @@
                     aviso.innerText = error;
                     aviso.attr('color', 'red');
                 });
+
+            return false;
         }
     </script>
 </asp:Content>

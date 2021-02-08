@@ -11,9 +11,9 @@ namespace Site.Cursos.Starter.JavaScript
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnDesafio1.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo1.aspx";
-            btnDesafio2.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo2.aspx";
-            btnDesafio4.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo4.aspx";
+            btnChallange1.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo1.aspx";
+            btnChallange2.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo2.aspx";
+            btnChallange4.NavigateUrl = rootSite + "Cursos/Starter/JavaScript/Modulo4.aspx";
         }
     }
 }

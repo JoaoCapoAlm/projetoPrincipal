@@ -26,13 +26,13 @@ namespace Site.Pagina
             {
                 string text = txtOriginal.Text;
                 int number = Convert.ToInt32(txtNumber.Text);
-                txtCriptografia.Text = Cryptography.CifraCesar(text, number);
-                txtCriptografia.CssClass = "";
+                txtCryptography.Text = Cryptography.CifraCesar(text, number);
+                txtCryptography.CssClass = "";
             }
             catch (Exception ex)
             {
-                txtCriptografia.Text = ex.Message;
-                txtCriptografia.CssClass = "error";
+                txtCryptography.Text = ex.Message;
+                txtCryptography.CssClass = "error";
                 throw ex;
             }
         }

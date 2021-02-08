@@ -1,10 +1,10 @@
 ﻿var root = window.location.protocol + '//' + window.location.host;
 
-function Mascaras(nacional = true) {
-    function telefoneCelular() {
-        if (nacional === true) {
-            $('.celularMask').mask('(99) 99999-9999');
-            $('.telefoneMask').mask('(99) 9999-9999');
+function masks(national = true) {
+    function cellPhoneMask() {
+        if (national === true) {
+            $('.cellMask').mask('(99) 99999-9999');
+            $('.phoneMask').mask('(99) 9999-9999');
             return;
         }
     }
@@ -29,7 +29,7 @@ function Mascaras(nacional = true) {
     }
 
     return {
-        telefoneCelular,
+        cellPhoneMask,
         DataMask,
         ValorMask,
         PercentMask,

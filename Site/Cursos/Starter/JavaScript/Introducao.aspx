@@ -26,7 +26,7 @@
                     <li class="list-group-item">Intervalo e timeout</li>
                 </ul>
                 <div class="card-footer text-center">
-                    <asp:HyperLink runat="server" ID="btnDesafio1" ClientIDMode="Static"
+                    <asp:HyperLink runat="server" ID="btnChallange1" ClientIDMode="Static"
                         CssClass="btn btn-primary" Text="Desafios" />
                 </div>
             </div>
@@ -44,7 +44,7 @@
                     <li class="list-group-item">Alterando estilos</li>
                 </ul>
                 <div class="card-footer text-center">
-                    <asp:HyperLink runat="server" ID="btnDesafio2" ClientIDMode="Static"
+                    <asp:HyperLink runat="server" ID="btnChallange2" ClientIDMode="Static"
                         CssClass="btn btn-primary" Text="Desafios" />
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <li class="list-group-item">Utilizando Axios</li>
                 </ul>
                 <div class="card-footer text-center">
-                    <asp:HyperLink runat="server" ID="btnDesafio4" ClientIDMode="Static"
+                    <asp:HyperLink runat="server" ID="btnChallange4" ClientIDMode="Static"
                         CssClass="btn btn-primary" Text="Desafios" />
                 </div>
             </div>

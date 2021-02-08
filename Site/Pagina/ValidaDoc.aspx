@@ -105,9 +105,9 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ScriptContent" runat="server">
-    <script>
+    <script type="text/javascript">
         $(document).ready(function () {
-            const Masked = Mascaras(true);
+            const Masked = masks(true);
             Masked.CPFMask();
             Masked.CNPJMask();
         })

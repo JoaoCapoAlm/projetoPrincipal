@@ -75,7 +75,7 @@ var newColor = getRandomColor();</code></pre>
                         possui a habilidade "Javascript" e retorna um booleano true/false
                         caso exista ou não.
                     </p>
-                    <pre class="codigo"><code>function temHabilidade(skills) {
+                    <pre class="code"><code>function temHabilidade(skills) {
     // código aqui
 }
 var skills = [
@@ -184,19 +184,19 @@ temHabilidade(skills);
             $('#txtHability').val('');
 
             if (habilities.toString().includes(newHability)) {
-                console.warn('Habilidade já cadastrada');
+                console.warn('Habilidade já cadastrada!');
                 return;
             }
 
             habilities.push(newHability);
 
-            var lista = document.getElementById('listHabilities');
-            lista.innerHTML = '';
+            const list = document.getElementById('listHabilities');
+            list.innerHTML = '';
 
             habilities.sort();
             
             habilities.forEach(hability => {
-                lista.innerHTML += `<li class='list-group-item'>${hability}</li>`;
+                list.innerHTML += `<li class='list-group-item'>${hability}</li>`;
             });
 
             if (newHability.toString().toLowerCase() === 'javascript') {

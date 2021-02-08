@@ -18,18 +18,14 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">Crie uma função que dado o objeto a seguir:</p>
-                    <div class="codigo">
-                        <code>
-                            var endereco =
-                            {
-                                rua: "Rua dos pinheiros",
-                                numero: 1293,
-                                bairro: "Centro",
-                                cidade: "São Paulo",
-                                uf: "SP"
-                            };
-                        </code>
-                    </div>
+                    <pre class="code"><code>var endereco =
+{
+    rua: "Rua dos pinheiros",
+    numero: 1293,
+    bairro: "Centro",
+    cidade: "São Paulo",
+    uf: "SP"
+};</code></pre>
                     <p>Retorne o seguinte conteúdo:</p>
                     <samp>O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros"
                         com nº 1293.</samp>
@@ -103,8 +99,9 @@
                 </div>
                 <div class="card-body">
                     <p>Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:</p>
-                    <pre class="codigo"><code>function pares(x, y) { // código aqui }
-pares(32, 321);</code></pre>
+                    <pre class="code"><code>function pares(x, y) { // código aqui }
+pares(32, 321);</code>
+                    </pre>
                 </div>
                 <div class="card-footer">
                     <h5>Resposta</h5>
@@ -151,9 +148,10 @@ pares(32, 321);</code></pre>
                 <div class="card-body">
                     <p>Escreva uma função que dado um total de anos de estudo retorna o quão
                         experiente o usuário é:</p>
-                    <pre class="codigo"><code>function experiência(anos) { // código aqui }
+                    <pre class="code"><code>function experiência(anos) { // código aqui }
 var anosEstudo = 7;
-experiência(anosEstudo);</code></pre>
+experiência(anosEstudo);</code>
+                    </pre>
                     <p>De 0-1 ano: Iniciante</p>
                     <p>De 1-3 anos: Intermediário</p>
                     <p>De 3-6 anos: Avançado</p>
